@@ -26,7 +26,12 @@ var save_fields = [
 
 var upsertToDB =  function (resp) {
 	var save_array = [];
-	body = JSON.parse(resp.body);
+	try {
+		body = JSON.parse(resp.body);
+	} catch(err) {
+		console.log(resp.body, err);
+	}
+	
 	body.data.forEach(function(day) {
 		var save_obj = {};
 		save_obj.company = resp.para.company;
