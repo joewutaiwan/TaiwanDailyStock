@@ -11,6 +11,7 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
+    "daemon": "^1.1.0",
     "mongodb": "^2.2.22",
     "request": "2.79.0",
     "sleep": "^5.1.0"
